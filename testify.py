@@ -1,2 +1,2 @@
-isVisited = [[True]*3 for _ in range(3)]
-print(isVisited)
+a = "hello"
+print(a[1:4])
