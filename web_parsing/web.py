@@ -46,4 +46,3 @@ search_meso(2401, 2420)
 
 df = pd.DataFrame(data=result,columns=['maeso', 'student'])
 df.to_csv('jshs_points.csv', index=False, encoding='cp949')
-
