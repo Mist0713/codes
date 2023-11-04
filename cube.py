@@ -41,7 +41,7 @@ projected_points = [
 
 def connect_points(i, j, points):
     pygame.draw.line(
-        screen, BLACK, (points[i][0], points[i][1]), (points[j][0], points[j][1]))
+        screen, WHITE, (points[i][0], points[i][1]), (points[j][0], points[j][1]))
 
 
 clock = pygame.time.Clock()
@@ -78,7 +78,7 @@ while True:
     ])  # type: ignore
     angle += 0.01
 
-    screen.fill(WHITE)
+    screen.fill((0,0,0))
     for i, point in enumerate(points):
         rotated2d = np.dot(rotation_z, point.reshape((3, 1)))
         rotated2d = np.dot(rotation_y, rotated2d)
