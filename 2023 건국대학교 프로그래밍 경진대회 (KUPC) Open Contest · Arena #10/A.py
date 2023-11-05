@@ -1,24 +1,24 @@
 import sys
 input = sys.stdin.readline
-n, a = map(int, input().split())
 
-answer = [0, 0]
+testCase = int(input())
 
-for i in range(n):
-    lst = list(int(input()))
-    cnt = 0
-    check = False
-    for j in range(a):
-        if not check and lst[j] == 1:
-            cnt+=1
-            check = True
-        elif lst[j] == 0:
-            check == 0
-    if cnt>answer[0]:
-        answer[0] = cnt
-        answer[1] = 1
-    elif cnt == answer[0]:
-        answer[1] += 1
-
-print(*answer, sep=' ')
-            
+for _ in range(testCase):
+    s = input().rstrip()
+    if len(s)%3==0:
+        sPrime = s[:len(s)//3]
+    else:
+        sPrime = s[:len(s)//3+1]
+    sPrimeRev = sPrime[::-1]
+    sPrimeTail = sPrime[1:]
+    sPrimeTailRev = sPrimeRev[1:]
+    if s == sPrime + sPrimeRev + sPrime:
+        print(1)
+    elif s == sPrime + sPrimeTailRev + sPrime:
+        print(1)
+    elif s == sPrime + sPrimeRev + sPrimeTail:
+        print(1)
+    elif s == sPrime + sPrimeTailRev + sPrimeTail:
+        print(1)
+    else:
+        print(0)
