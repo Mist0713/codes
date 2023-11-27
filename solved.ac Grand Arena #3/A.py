@@ -13,4 +13,4 @@ for i in sizes:
         result += i//T + 1
 
 print(result)
-print(N//T, N%T)
+print(N//P, N%P)
