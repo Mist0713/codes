@@ -1,18 +1,31 @@
 import sys
 input = sys.stdin.readline
 
-n, m = map(int, input().split())
+N, M = map(int, input().split())
 
+isVisited = [False] * (N+1)
 lst = []
 
-def solve():
-    if len(lst) == m:
+selected = 0
+
+def solve(selected):
+    if selected == M:
         print(*lst, sep=' ')
         return
-    for i in range(1, n+1):
-        if not (i in lst):
+    for i in range(1, N+1):
+        if isVisited[i] == False:
+            isVisited[i] = True
             lst.append(i)
-            solve()
+            solve(selected+1)
+            isVisited[i] = False
             lst.pop()
 
-solve()
+solve(0)
+
+
+# !hello!
+# * Hello!
+# ? Hello?
+# todo:Hello!
+# >= *** -> ++ 
+#========================> <====================

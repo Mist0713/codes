@@ -10,3 +10,4 @@ for i in range(1, n):
         if lst[i]>lst[j]:
             dp[i] = max(dp[i], dp[j]+1)
 print(max(dp))
+ 
