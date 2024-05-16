@@ -7,9 +7,12 @@ lst = list(map(int, input().split()))
 lstForCompare = lst[:]
 lstForCompare.sort()
 
-for _ in range(-1, 0, -1):
+print(lstForCompare)
 
+answerPower = []
+isPowerConnected = []
 
-
-
-
+for i in range(K):
+    
+    answerPower.append(lst.index(lstForCompare[i]))
+    
