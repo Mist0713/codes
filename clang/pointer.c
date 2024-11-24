@@ -3,7 +3,7 @@
 int a = 20;
 int* p;
 
-int main(void) {
+int main() {
 	p = &a;
 
 	printf("a에 저장된 변수 : %d\n", a); // 20
