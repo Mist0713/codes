@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
-#pragma warning(disable:4996)
 
 int sum(int a, int b) {
 	return a + b;
@@ -16,13 +14,13 @@ typedef struct {
 int main(void) {
 	Student student1;
 
-	printf("ÀÌ¸§ : ");
+	printf("ì´ë¦„ : ");
 	scanf("%s", student1.name);
-	printf("ÇĞ¹ø : ");
+	printf("í•™ë²ˆ : ");
 	scanf("%d", & student1.id);
-	printf("¼ºÀû : ");
+	printf("ì ìˆ˜ : ");
 	scanf("%f", & student1.score);
-	printf("¼º : ");
+	printf("ì„±ë³„ : ");
 	scanf("%s", student1.gender);
 
 	printf("%s\n", student1.name);
