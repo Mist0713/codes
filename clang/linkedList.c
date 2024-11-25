@@ -1,88 +1,13 @@
-/*#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct Node {
-	int data;
-	struct Node* next;
-}Node;
-
-Node* create_node(int data) {
-	Node* new_node = (Node*)malloc(sizeof(Node));
-	new_node->data = data;
-	new_node->next = NULL;
-	return new_node;
-}
-
-void append(Node** head, int data) {
-	Node* new_node = create_node(data);
-
-	if (*head == NULL) {
-		*head = new_node;
-		return;
-	}
-	Node* temp = *head;
-	while (temp->next != NULL) {
-		temp = temp->next;
-	}
-	temp->next = new_node;
-}
-
-void delect_node(Node** head, int key) {
-	Node* temp = *head;
-	Node* pery = NULL;
-
-	//Ã¹ ¹øÂ° ³ëµå »èÁ¦
-	if (temp != NULL && temp->data == key) {
-		*head = temp->next;
-		free(temp);
-		return 0;
-	}
-	while (temp != NULL && temp->data != key) {
-		int prev = temp;
-		temp = temp->next;
-	}
-	//Ã£´Â°Ô ¾øÀ½
-	if (temp == NULL) return;
-
-	prev->next = temp->next;
-	free(temp);
-}
-
-void print_list(Node* head) {
-	Node* temp = head;
-	while (temp != NULL) {
-		printf("%d - >", temp->data);
-		temp = temp->next;
-	}
-	printf("NULL\n");
-}
-
-int main(void) {
-
-	Node* head = NULL;
-
-	append(&head, 1);
-	append(&head, 2);
-	append(&head, 3);
-	append(&head, 4);
-	append(&head, 5);
-	append(&head, 6);
-
-	print_list(head);
-
-	return 0;
-}*/
-
 #include <stdio.h>
 #include <stdlib.h>
 
-// ³ëµå¸¦ ±¸Á¶Ã¼·Î Á¤ÀÇ
+//ë…¸ë“œë¥¼ êµ¬ì¡°ì²´ë¡œ ì •ì˜
 typedef struct Node {
     int data;
     struct Node* next;
 }Node;
 
-//³ëµå »ý¼º
+//ë…¸ë“œ ìƒì„±
 Node* create_node(int data) {
     Node* new_node = (Node*)malloc(sizeof(Node));
     new_node->data = data;
@@ -90,7 +15,7 @@ Node* create_node(int data) {
     return new_node;
 }
 
-//¸®½ºÆ®¿¡ ³ëµå¸¦ Ãß°¡
+//ë¦¬ìŠ¤íŠ¸ì— ë…¸ë“œë¥¼ ì¶”ê°€
 void append(Node** head, int data) {
     Node* new_node = create_node(data);
     if (*head == NULL) {
@@ -103,26 +28,26 @@ void append(Node** head, int data) {
     }
     temp->next = new_node;
 }
-//»èÁ¦
+//ì‚­ì œ
 void delete_node(Node** head, int key) {
     Node* temp = *head;
     Node* prev = NULL;
 
-    //Ã¹¹øÂ° ³ëµå°¡ »èÁ¦ÇÒ ³ëµåÀÏ °æ¿ì
+    //ì²«ë²ˆì§¸ ë…¸ë“œê°€ ì‚­ì œí•  ë…¸ë“œì¼ ê²½ìš°
     if (temp != NULL && temp->data == key) {
         *head = temp->next;
         free(temp);
         return;
     }
-    //»èÁ¦ÇÒ ³ëµå Ã£±â
+    //ì‚­ì œí•  ë…¸ë“œ ì°¾ê¸°
     while (temp != NULL && temp->data != key) {
         prev = temp;
         temp = temp->next;
     }
-    //»èÁ¦ÇÒ µ¥ÀÌÅÍ°¡ ¾ø´Â °æ¿ì
+    //ì‚­ì œí•  ë°ì´í„°ê°€ ì—†ëŠ” ê²½ìš°
     if (temp == NULL) return;
 
-    //³ëµå »èÁ¦
+    //ë…¸ë“œ ì‚­ì œ
     prev->next = temp->next;
     free(temp);
 }
