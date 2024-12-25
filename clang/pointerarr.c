@@ -7,10 +7,10 @@ int *p_arr = arr;
 int main() {
 	printf("arr[0] : %d\n", arr[0]);
 	//printf("pointer value : %p\n", &arr);
-	printf("p_arr°¡ °¡¸®Å°´Â °ª(Ã¹¹øÂ° ÁÖ¼Ò) : %d\n", *p_arr);
+	printf("p_arrê°€ ê°€ë¦¬í‚¤ëŠ” ê°’(ì²«ë²ˆì§¸ ì£¼ì†Œ) : %d\n", *p_arr);
 	p_arr++;
-	printf("p_arr°¡ °¡¸®Å°´Â °ª(Ã¹¹øÂ° ÁÖ¼Ò) : %d\n", *p_arr);
+	printf("p_arrê°€ ê°€ë¦¬í‚¤ëŠ” ê°’(ì²«ë²ˆì§¸ ì£¼ì†Œ) : %d\n", *p_arr);
 	p_arr--;
-	printf("p_arr°¡ °¡¸®Å°´Â °ª(Ã¹¹øÂ° ÁÖ¼Ò) : %d\n", *p_arr);
+	printf("p_arrê°€ ê°€ë¦¬í‚¤ëŠ” ê°’(ì²«ë²ˆì§¸ ì£¼ì†Œ) : %d\n", *p_arr);
 	return 0;
 }

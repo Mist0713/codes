@@ -7,11 +7,11 @@ struct Node {
 };
 
 struct Graph {
-    int numVertices; //ÃÑ ³ëµåÀÇ °¹¼ö
+    int numVertices; //ì´ ë…¸ë“œì˜ ê°œìˆ˜
     struct Node** adjLists;
 };
 
-// ³ëµå »ý¼º ÇÔ¼ö
+// ë…¸ë“œ ìƒì„± í•¨ìˆ˜
 struct Node* createNode(int v) {
     struct Node* newNode = malloc(sizeof(struct Node));
     newNode->vertex = v;
@@ -19,7 +19,7 @@ struct Node* createNode(int v) {
     return newNode;
 }
 
-// ±×·¡ÇÁ »ý¼º ÇÔ¼ö
+// ê·¸ëž˜í”„ ìƒì„± í•¨ìˆ˜
 struct Graph* createGraph(int vertices) {
     struct Graph* graph = malloc(sizeof(struct Graph));
     graph->numVertices = vertices;
@@ -32,24 +32,24 @@ struct Graph* createGraph(int vertices) {
     return graph;
 }
 
-// °£¼± Ãß°¡ ÇÔ¼ö
+// ê°„ì„  ì¶”ê°€ í•¨ìˆ˜
 void addEdge(struct Graph* graph, int start, int end) {
-    // start¿¡¼­ end·Î °¡´Â °£¼± Ãß°¡
+    // startì—ì„œ endë¡œ ê°€ëŠ” ê°„ì„  ì¶”ê°€
     struct Node* newNode = createNode(end);
     newNode->next = graph->adjLists[start];
     graph->adjLists[start] = newNode;
 
-    // end¿¡¼­ start·Î °¡´Â °£¼± Ãß°¡ (¹«¹æÇâ ±×·¡ÇÁ)
+    // endì—ì„œ startë¡œ ê°€ëŠ” ê°„ì„  ì¶”ê°€(ë¬´ë°©í–¥ ê·¸ëž˜í”„)
     newNode = createNode(start);
     newNode->next = graph->adjLists[end];
     graph->adjLists[end] = newNode;
 }
 
-// ±×·¡ÇÁ Ãâ·Â ÇÔ¼ö
+//ê·¸ëž˜í”„ ì¶œë ¥ í•¨ìˆ˜
 void printGraph(struct Graph* graph) {
     for (int v = 0; v < graph->numVertices; v++) {
         struct Node* temp = graph->adjLists[v];
-        printf("Á¤Á¡ %d: ", v);
+        printf("ì •ì  %d: ", v);
         while (temp) {
             printf("%d ", temp->vertex);
             temp = temp->next;

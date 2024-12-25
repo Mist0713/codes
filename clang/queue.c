@@ -36,7 +36,7 @@ void enqueue(Queue* queue, int data) {
 
 int dequeue(Queue* queue) {
 	if (is_empty(queue)) {
-		printf("ÇØ´ç Å¥°¡ ºñ¾ú½À´Ï´Ù.\n");
+		printf("í•´ë‹¹ íê°€ ë¹„ì—ˆìŠµë‹ˆë‹¤.\n");
 		return -1;
 	}
 	Node *temp = queue->front;
@@ -46,7 +46,7 @@ int dequeue(Queue* queue) {
 		queue->rear = NULL;
 	}
 	free(temp);
-	return dequeue;
+	return dequeue(queue);
 }
 
 void print_queue(Queue* queue) {

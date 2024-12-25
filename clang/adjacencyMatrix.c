@@ -1,8 +1,4 @@
-/*°¡ÁßÄ¡¿Í ¹æÇâÀÌ ¸ğµÎ ¾ø´Â ±×·¡ÇÁ
-
-ÀÎÁ¢ Çà·Ä : Çà°ú ¿­À» ¸ğµÎ
-ÀÎÁ¢ ¸®½ºÆ®
-*/
+// ê°€ì¤‘ì¹˜ì™€ ë°©í–¥ì´ ëª¨ë‘ ì—†ëŠ” ê·¸ë˜í”„
 
 #include <stdio.h>
 #define MAX 5
@@ -17,7 +13,7 @@ void initGraph(int graph[MAX][MAX]) {
 
 void addEdge(int graph[MAX][MAX], int start, int end) {
 	graph[start][end] = 1;
-	graph[end][start] = 1;  //¹«¹æÇâ ±×·¡ÇÁÀÎ °æ¿ì
+	graph[end][start] = 1;  //ë¬´ë°©í–¥ ê·¸ë˜í”„ì¸ ê²½ìš°
 }
 
 void printGraph(int graph[MAX][MAX]) {
@@ -31,7 +27,7 @@ void printGraph(int graph[MAX][MAX]) {
 
 int main(void) {
 	int graph[MAX][MAX];
-	initGraph(graph); //±×·¡ÇÁ ÃÊ±âÈ­
+	initGraph(graph); //ê·¸ë˜í”„ ì´ˆê¸°í™”
 
 	addEdge(graph, 0, 1);
 	addEdge(graph, 0, 4);
