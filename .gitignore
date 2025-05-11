@@ -1,9 +1,3 @@
 *.exe
-chromedriver-win64.zip
-chromedriver-win32.zip
-chromedriver-mac64.zip
-chromedriver-mac-arm64.zip
-chromedriver-linux64.zip
-chromedriver-linux32.zip
-chromedriver-linux-arm64.zip
-chromedriver-linux
+web_parsing/chromedriver-win64/LICENSE.chromedriver
+web_parsing/chromedriver-win64/THIRD_PARTY_NOTICES.chromedriver
