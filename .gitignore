@@ -1,3 +1,5 @@
 *.exe
 web_parsing/chromedriver-win64/LICENSE.chromedriver
 web_parsing/chromedriver-win64/THIRD_PARTY_NOTICES.chromedriver
+Chromatic Polynomial/__pycache__/graph.cpython-312.pyc
+Chromatic Polynomial/__pycache__/gui.cpython-312.pyc
